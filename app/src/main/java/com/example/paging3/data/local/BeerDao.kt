@@ -9,6 +9,8 @@ import androidx.room.Upsert
 interface BeerDao {
     @Upsert
     suspend fun upsertAll(beers:List<BeerEntity>)
+   // @Upsert
+    //suspend fun upsertAll(beers:List<BeerEntity>)
 
     @Query("SELECT * FROM beerentity")
     fun pagingSource(): PagingSource<Int,BeerEntity>
